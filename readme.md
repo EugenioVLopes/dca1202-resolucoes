@@ -1,8 +1,8 @@
 # DCA1202-Programacao-Avancada
 
-Nesse repositório estará armazenado os códigos fontes 
+Este repositório contém os códigos-fonte dos exercícios e projetos da grade curricular 
 
-dos exercícios e projetos propostos na grade curricular do curso.
+da disciplina DCA1202 - Programação Avancada.
 
 # Autores
 
