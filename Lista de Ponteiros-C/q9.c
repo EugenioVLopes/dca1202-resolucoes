@@ -22,12 +22,12 @@ struct teste // Declaração da estrutura teste.
 
 int main()
 {
-    struct teste *s;       
+    struct teste *s;
 
-    printf("%d", s->x);    
-    
-    printf("%s", s->nome); 
-    
+    printf("%d", s->x);
+
+    printf("%s", s->nome);
+
     return 0;
 }
 
