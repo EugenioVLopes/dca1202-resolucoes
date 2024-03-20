@@ -8,24 +8,25 @@
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
     int mat[4], *p, x; // Declaração do vetor mat de 4 posições, do ponteiro p e da variável x.
-    
+
     p = mat + 1; // Válida.
     // O ponteiro p recebe o endereço do segundo elemento do vetor mat.
     // mat + 1 é equivalente a &mat[1].
     printf("p1 = %p\n", p);
-    
+
     p = mat; // Válida.
     // O ponteiro p recebe o endereço do primeiro elemento do vetor mat.
     // mat é equivalente a &mat[0].
     printf("p2 = %p\n", p);
-    
+
     p = mat; // Válida.
     // O ponteiro p recebe o endereço do primeiro elemento do vetor mat.
     // mat é equivalente a &mat[0].
     printf("p3 = %p\n", p);
-    
+
     x = (*mat); // Válida.
     // A variável x recebe o valor do primeiro elemento do vetor mat.
     // *mat é equivalente a mat[0].
