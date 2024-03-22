@@ -1,0 +1,2 @@
+Executando:
+- gcc nome_arquivo.c -o nome_arquivo.exe
