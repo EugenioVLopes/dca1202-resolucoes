@@ -6,7 +6,7 @@
     ◦ pulo + 4;
     ◦ pulo + 2;
 */
-
+ 
 #include <stdio.h>
 
 int main() {
