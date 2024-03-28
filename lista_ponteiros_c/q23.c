@@ -62,15 +62,7 @@ int main()
 // binária, implementada pela função funcao2.
 // A afirmação III está incorreta, pois a função funcao2 implementa uma estratégia recursiva, não iterativa.
 // Na busca binária iterativa, um loop seria utilizado para dividir o vetor e realizar as comparações.
-// Portanto, a resposta correta é a alternativa VI. I, II.
 
 // A busca linear (funcao1) sempre percorre todo o vetor, enquanto a busca binária (funcao2) divide o vetor a cada iteração.
 // No pior caso, a busca linear fará n comparações, enquanto a busca binária fará log2(n) comparações. Para grandes valores
 // de n, a busca binária será significativamente mais rápida.
-
-
-// Perguntar a agostinho, se minha resposta do item 2 fosse que a função 2 é mais lenta que a função 1 pq usa recursão
-// seria considerada correta? 
-
-// Ou a busca binária é mais rápida que a busca linear,
-// mesmo que a busca binária use recursão e a busca linear use iteração. 
