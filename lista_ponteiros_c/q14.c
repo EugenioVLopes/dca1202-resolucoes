@@ -37,7 +37,7 @@ int main()
     // Chamada da função 'soma' através do ponteiro 'p'.
     // Passamos os argumentos 21 e 26 para a função 'soma' através do ponteiro 'p'.
     printf("\nMedia: %.2f\n", p(idade1, idade2));
-    printf("Media dos devs dessa lista: %.2f\n", p2(21, 26));
+    printf("Media dos devs dessa lista: %.2f\n", p2(21, 27));
 
     return 0;
 }
