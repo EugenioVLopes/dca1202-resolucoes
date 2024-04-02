@@ -23,39 +23,44 @@
 #include <stdlib.h>
 //
 // Função que aloca a matriz tridimensional
-int ***alocaMatriz(int altura, int largura, int profundidade)
+int ***alocaMatriz(int coluna, int linha, int profundidade)
 {
-    int ***matriz = (int ***)malloc(altura * sizeof(int **)); // Alocando a primeira dimensão da matriz
-    for (int i = 0; i < altura; i++)
-    {
-        matriz[i] = (int **)malloc(largura * sizeof(int *)); // Alocando a segunda dimensão da matriz
-        for (int j = 0; j < largura; j++)
-        {
-            matriz[i][j] = (int *)malloc(profundidade * sizeof(int)); // Alocando a terceira dimensão da matriz
+    int ***matriz; // Declaração da matriz tridimensional
+    int i, j;      // Variáveis auxiliares
+
+    // Alocando a primeira dimensao
+    matriz = (int ***)malloc(profundidade * sizeof(int **));
+
+    // Alocando a segunda dimensao
+    matriz[0] = (int **)malloc(profundidade * linha * sizeof(int *));
+
+    // Alocando a terceira dimensao
+    matriz[0][0] = (int *)malloc(profundidade * linha * coluna * sizeof(int));
+
+    // Laço para ajustar os ponteiros da segunda dimensão apontar para a terceira dimensão
+    for (i = 0; i < linha; i++) {
+        matriz[i] = matriz[0] + i * profundidade;
+        for (j = 0; j < profundidade; j++) {
+            matriz[i][j] = matriz[0][0] + (i * profundidade + j) * coluna;
         }
     }
+
     return matriz;
 }
 // Função que libera a matriz tridimensional
-void liberaMatriz(int ***matriz, int altura, int largura)
+void liberaMatriz(int ***matriz, int coluna, int linha)
 {
-    for (int i = 0; i < altura; i++)
-    {
-        for (int j = 0; j < largura; j++)
-        {
-            free(matriz[i][j]); // Liberando a terceira dimensão da matriz
-        }
-        free(matriz[i]); // Liberando a segunda dimensão da matriz
-    }
-    free(matriz); // Liberando a primeira dimensão da matriz
+    free(matriz[0][0]); // Liberando a terceira dimensão da matriz
+    free(matriz[0]);    // Liberando a segunda dimensão da matriz
+    free(matriz);       // Liberando a primeira dimensão da matriz
 }
 // Função que imprime um plano da matriz tridimensional
-void imprimePlano(int ***matriz, int altura, int largura, int profundidade, int plano)
+void imprimePlano(int ***matriz, int coluna, int linha, int profundidade, int plano)
 {
     printf("Plano %d:\n", plano);
-    for (int i = 0; i < altura; i++)
+    for (int i = 0; i < coluna; i++)
     {
-        for (int j = 0; j < largura; j++)
+        for (int j = 0; j < linha; j++)
         {
             printf("%d ", matriz[i][j][plano]);
         }
@@ -63,28 +68,29 @@ void imprimePlano(int ***matriz, int altura, int largura, int profundidade, int 
     }
 }
 // Função que modifica o estado de um elemento da matriz tridimensional
-void modificaElemento(int ***matriz, int altura, int largura, int profundidade, int i, int j, int k, int valor)
+void modificaElemento(int ***matriz, int i, int j, int k, int valor)
 {
     matriz[i][j][k] = valor;
 }
 int main()
 {
-    int altura, largura, profundidade, planoImpresso;
-    
-    printf("Digite a altura da matriz: ");
-    scanf("%d", &altura);
-    
-    printf("Digite a largura da matriz: ");
-    scanf("%d", &largura);
-    
+    int coluna, linha, profundidade, planoImpresso;
+    int iModificado, jModificado, kModificado, valorModificado;
+
+    printf("Digite a coluna da matriz: ");
+    scanf("%d", &coluna);
+
+    printf("Digite a linha da matriz: ");
+    scanf("%d", &linha);
+
     printf("Digite a profundidade da matriz: ");
     scanf("%d", &profundidade);
-    
-    int ***matriz = alocaMatriz(altura, largura, profundidade);
+
+    int ***matriz = alocaMatriz(coluna, linha, profundidade);
     // Inicializando a matriz com valores aleatórios
-    for (int i = 0; i < altura; i++)
+    for (int i = 0; i < coluna; i++)
     {
-        for (int j = 0; j < largura; j++)
+        for (int j = 0; j < linha; j++)
         {
             for (int k = 0; k < profundidade; k++)
             {
@@ -95,17 +101,46 @@ int main()
 
     printf("Digite o plano que deseja imprimir da matriz: ");
     scanf("%d", &planoImpresso);
-    
+
     // Imprimindo um plano da matriz tridimensional
-    imprimePlano(matriz, altura, largura, profundidade, planoImpresso);
+    imprimePlano(matriz, coluna, linha, profundidade, planoImpresso);
 
     // Modificando o estado de um elemento da matriz
-    modificaElemento(matriz, altura, largura, profundidade, 0, 0, 0, 1);
+    printf("Digite o valor de i: ");
+    scanf("%d", &iModificado);
+
+    printf("Digite o valor de j: ");
+    scanf("%d", &jModificado);
+
+    printf("Digite o valor de k: ");
+    scanf("%d", &kModificado);
+
+    printf("Digite o novo valor do elemento: ");
+    scanf("%d", &valorModificado);
+
+    modificaElemento(matriz, iModificado, jModificado, kModificado, valorModificado);
 
     // Imprimindo o plano modificado
-    imprimePlano(matriz, altura, largura, profundidade, 0);
-    
+    imprimePlano(matriz, coluna, linha, profundidade, planoImpresso);
+
     // Liberando a memória alocada para a matriz
-    liberaMatriz(matriz, altura, largura);
+    liberaMatriz(matriz, coluna, linha);
     return 0;
 }
+
+// Comentários para estudo:
+
+// - Preciso liberar a memória alocada 3 vezes?
+//     Sim, é preciso fazer esses três free. Quando é alocada memória dinamicamente em C usando malloc, calloc ou realloc,
+//     é sua responsabilidade liberar essa memória quando você terminar de usá-la. Se não for feito isso, o programa
+//     terá um vazamento de memória, o que pode levar a problemas de desempenho ou até mesmo fazer com que seu programa
+//     trave se ele ficar sem memória.
+
+// No caso desse código, foi alocada memória para uma matriz tridimensional em três etapas separadas. Portanto, é
+// preciso liberar essa memória em três etapas separadas também.
+
+// - Qual é a diferença entre malloc e calloc na alocação de memória em C?
+//     malloc e calloc são funções em C que são usadas para alocar memória dinamicamente. A diferença entre malloc e calloc
+//     é que malloc não inicializa a memória alocada, enquanto calloc inicializa a memória alocada com zero.
+//     Portanto, se não for desejado que a memória alocada seja inicializada com zero, deve-se usar calloc. Caso o conteudo
+//     inicial não seja importante, pode-se usar malloc.
