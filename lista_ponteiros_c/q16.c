@@ -5,8 +5,7 @@
 // Comente o seu código, explicando o que faz cada uma das linhas.
 
 // Função de comparação para qsort
-int compararElementos(const void *a, const void *b)
-{
+int compararElementos(const void *a, const void *b){
     // Convertendo os ponteiros para float
     float *x = (float *) a;
     float *y = (float *) b;
@@ -23,8 +22,7 @@ int compararElementos(const void *a, const void *b)
         return 0;
 }
 
-int main()
-{
+int main(){
     int n; // Variável que receberá o tamanho do vetor
 
     float *vetor; // Ponteiro para o vetor
@@ -43,8 +41,7 @@ int main()
     }
 
     // Lendo os valores do vetor
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         printf("Digite o valor %d: ", i + 1);
         scanf("%f", &vetor[i]);
     }
