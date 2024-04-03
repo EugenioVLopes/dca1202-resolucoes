@@ -17,29 +17,25 @@
 #include <stdlib.h>
 
 // Função que codifica a matriz de leds
-unsigned long codificaMatriz(unsigned char m[8][8])
+unsigned long codificaMatriz(unsigned char matriz[8][8])
 {
-    unsigned long estado = 0; // Variável que armazenará o estado dos leds
+    unsigned long estado; // Variável que armazenará o estado dos leds
+    unsigned long *ponteiro;  // Ponteiro para a variável estado
     int i, j;                 // Variáveis auxiliares
 
-    // Laço para percorrer a matriz de leds
-    for (i = 0; i < 8; i++)
+    for (int i = 0; i < 8; i++)
     {
-        for (j = 0; j < 8; j++)
+        for (int j = 0; j < 8; j++)
         {
-            // Verificando se o valor do item da matriz é 1
-            if (m[i][j] == 1)
-            {
-                // Utilizando o operador bitwise '|' para atribuir o estado do led como ativado
-                estado |= (1UL << (i * 8 + j));
-            }
-            else
-            {
-                // Utilizando o operador bitwise '&' para atribuir o estado do led como desativado
-                estado &= ~(1UL << (i * 8 + j));
-            }
+            estado = (estado << 1) | matriz[i][j];
+            // estado << 1: O operador << desloca todos os bits na variável estado uma posição para a esquerda.
+            // | matriz[i][j]: Este é um operador OR bit a bit. Ele compara cada bit de (estado << 1) com o bit correspondente
+            // em matriz[i][j]. Se pelo menos um dos bits for 1, o bit correspondente no resultado é definido como 1. 
+            // Caso contrário, o bit é definido como 0.
         }
     }
+
+    ponteiro = &estado;
 
     return estado;
 }
@@ -54,47 +50,21 @@ int main()
         {1, 0, 1, 0, 1, 0, 1, 0},
         {0, 1, 0, 1, 0, 1, 0, 1},
         {1, 0, 1, 0, 1, 0, 1, 0},
-        {0, 1, 0, 1, 0, 1, 0, 1}};
+        {0, 1, 0, 1, 0, 1, 0, 1}
+    };
 
     unsigned long estado = codificaMatriz(m); // Codificando a matriz de leds
 
-    printf("Estado dos leds: %d ", estado);
-    
-    // Laço para imprimir o estado dos leds
-    for (int i = 0; i < 64; i++)
+    printf("Estado: ");
+
+    // Imprimir cada bit individualmente
+    for (int i = 63; i >= 0; i--)
     {
-        // Utilizando o operador bitwise '&' para verificar o estado do led
-        if (estado & (1UL << i)) // Se o led estiver ativado 
-        {
-            printf("1");
-        }
-        else
-        {
-            printf("0");
-        }
+        unsigned long bit = (estado >> i) & 1;
+        printf("%lu ", bit);
     }
-    
+
     printf("\n");
 
     return 0;
 }
-
-// O código acima imprime o estado de 64 LEDs em um unsigned long. O estado de cada LED é armazenado
-// em uma variável chamada estado, que é um número inteiro de 64 bits. 
-
-// Cada bit na variável estado representa o estado de um LED: se o bit estiver definido (1), o LED correspondente está 
-// ligado; se o bit estiver desativado (0), o LED correspondente está desligado.
-
-// O código usa um laço for para percorrer cada bit na variável estado. A variável de controle do laço i começa em 0 e vai 
-// até 63, representando as posições dos bits na variável estado.
-
-// Dentro do laço, o código usa um if com um operador bitwise AND (&) para verificar o estado do LED correspondente ao bit
-// atual. O código (1UL << i) desloca o número 1 i posições para a esquerda, criando um número que tem todos os bits 
-// definidos como 0, exceto o bit na posição i.
-
-// O operador bitwise AND compara esse número com o estado. Se o bit na posição i em estado estiver definido, o resultado
-// será diferente de zero e o if será verdadeiro. Nesse caso, o código imprime "1", indicando que o LED correspondente está
-// ligado.
-
-// Se o bit na posição i em estado não estiver definido, o resultado será zero e o if será falso. Nesse caso, o código 
-// imprime "0", indicando que o LED correspondente está desligado.
