@@ -43,10 +43,8 @@
 //   free(n);
 // }
 
-// Resposta: Alternativa E. O trecho de código da alternativa E apresenta um vazamento de memória. 
-// Isso ocorre porque, após a alocação de memória para o ponteiro m, o ponteiro n é alocado e, em seguida,
-// o ponteiro m é atribuído ao ponteiro n. Isso faz com que o ponteiro m perca a referência para a memória alocada 
-// inicialmente, resultando em um vazamento de memória. Além disso, o ponteiro n é liberado duas vezes, o que também 
-// pode causar problemas de memória. Para corrigir esse problema, é necessário liberar a memória alocada para o ponteiro 
-// m antes de atribuir o ponteiro n a ele.
-
+// Resposta: Alternativa C. O trecho de código da alternativa C apresenta um vazamento de memória. 
+// Isso ocorre porque a memória alocada para o ponteiro s não é liberada caso o tamanho da string 
+// passada como argumento seja maior que 50. Nesse caso, a função retorna -1 sem liberar a memória 
+// alocada, resultando em um vazamento de memória. Para corrigir esse problema, é necessário liberar 
+// a memória alocada para o ponteiro s antes de retornar -1.

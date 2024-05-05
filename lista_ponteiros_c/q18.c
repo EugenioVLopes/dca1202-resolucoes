@@ -39,14 +39,14 @@ void ordena(int *vetor, int n, int (*compara)(const void *, const void *)){
 
 int main()
 {
-    clock_t inicioQs16, fimQs16, inicioQs17, fimQs17;
-    double tempoGastoQs16, tempoGastoQs17;
+    clock_t inicioQs16, fimQs16, inicioQs17, fimQs17; // Variáveis para medir o tempo de execução
+    double tempoGastoQs16, tempoGastoQs17; // Variáveis para armazenar o tempo gasto
 
     int nQ16; // Variável que receberá o tamanho do vetor
     float *vetorQ16; // Ponteiro para o vetor
 
-    int nQ17;
-    int *vetorQ17;
+    int nQ17; // Variável que receberá o tamanho do vetor
+    int *vetorQ17; // Ponteiro para o vetor
 
     printf("Digite o tamanho do vetor da Qs16: ");
     scanf("%d", &nQ16);
@@ -54,8 +54,8 @@ int main()
     printf("Digite o tamanho do vetor da Qs17: ");
     scanf("%d", &nQ17);
 
-    vetorQ16 = (float *)malloc(nQ16 * sizeof(float));
-    vetorQ17 = (int *)malloc(nQ17 * sizeof(int)); 
+    vetorQ16 = (float *)malloc(nQ16 * sizeof(float)); // Alocando memória para o vetor
+    vetorQ17 = (int *)malloc(nQ17 * sizeof(int)); // Alocando memória para o vetor
     
     if (vetorQ16 == NULL || vetorQ17 == NULL){
         printf("Memória insuficiente\n");
