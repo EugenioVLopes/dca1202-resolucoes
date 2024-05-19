@@ -69,8 +69,5 @@ int main()
 // Se x for declarado como double, cada elemento do vetor x ocupará 8 bytes.
 // Portanto, x+1 ocupará 4100, x+2 ocupará 4108 e x+3 ocupará 4116.
 
-
-
-
 // PERGUNTAR A AGOSTINHO SOBRE O PORQUE DA INICIALIZAÇÃO DE CHAR NÃO FUNCIONAR QUANDO EU USO "", 
 // MAS QUANDO EU USO '' DA CERTO.

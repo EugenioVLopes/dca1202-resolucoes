@@ -10,14 +10,7 @@
  * @struct Voxel
  * @brief Representa um voxel, que é um elemento básico para a construção de esculturas.
  */
-struct Voxel
-{
-  float r;   /**< Componente vermelho da cor do voxel (0 a 1). */
-  float g;   /**< Componente verde da cor do voxel (0 a 1). */
-  float b;   /**< Componente azul da cor do voxel (0 a 1). */
-  float a;   /**< Transparência do voxel (0 a 1). */
-  bool show; /**< Indica se o voxel deve ser exibido ou não. */
-};
+
 struct Voxel
 {
   float r, g, b; // Cores: Vermelhor, Verde, Azul
