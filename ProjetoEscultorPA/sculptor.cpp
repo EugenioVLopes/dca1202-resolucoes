@@ -1,9 +1,15 @@
 #include "sculptor.hpp"
-
 #include <cmath>
 #include <fstream>
 #include <iostream>
 
+/**
+ * @brief Construtor da classe Sculptor.
+ *
+ * @param _nx Tamanho da dimensão x do escultor.
+ * @param _ny Tamanho da dimensão y do escultor.
+ * @param _nz Tamanho da dimensão z do escultor.
+ */
 Sculptor::Sculptor(int _nx, int _ny, int _nz)
 {
   // Atribuição os valores de nx, ny e nz para o objeto Sculptor
@@ -35,6 +41,13 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz)
              << std ::endl;
 }
 
+/**
+ * @brief Destrutor da classe Sculptor.
+ *
+ * Libera a memória alocada para a matriz tridimensional que representa o escultor.
+ *
+ * @see Sculptor
+ */
 Sculptor::~Sculptor()
 {
   // Implementação do destrutor liberando as memórias alocadas
@@ -42,12 +55,15 @@ Sculptor::~Sculptor()
   delete[] v[0];
   delete[] v;
 }
-// Método para definir a cor do escultor
-// Parâmetros:
-//   r: valor da componente vermelha (entre 0 e 1)
-//   g: valor da componente verde (entre 0 e 1)
-//   b: valor da componente azul (entre 0 e 1)
-//   alpha: valor da transparência (entre 0 e 1)
+
+/**
+ * @brief Define a cor atual do escultor.
+ *
+ * @param r Valor do componente vermelho da cor (entre 0 e 1).
+ * @param g Valor do componente verde da cor (entre 0 e 1).
+ * @param b Valor do componente azul da cor (entre 0 e 1).
+ * @param a Valor da transparência da cor (entre 0 e 1).
+ */
 void Sculptor::setColor(float r, float g, float b, float a)
 {
   // Verifica se o valor de r está no intervalo correto (entre 0 e 1)
@@ -76,11 +92,13 @@ void Sculptor::setColor(float r, float g, float b, float a)
   }
 }
 
-// Método para adicionar um voxel na posição (x, y, z)
-// Parâmetros:
-//   x: coordenada x do voxel
-//   y: coordenada y do voxel
-//   z: coordenada z do voxel
+/**
+ * @brief Define um voxel na posição (x, y, z) como visível e define sua cor e transparência.
+ *
+ * @param x A coordenada x do voxel.
+ * @param y A coordenada y do voxel.
+ * @param z A coordenada z do voxel.
+ */
 void Sculptor::putVoxel(int x, int y, int z)
 {
 
@@ -94,12 +112,29 @@ void Sculptor::putVoxel(int x, int y, int z)
   v[x][y][z].a = a;
 }
 
+/**
+ * @brief Método responsável por remover um voxel da matriz 3D.
+ *
+ * @param x A coordenada x do voxel a ser removido.
+ * @param y A coordenada y do voxel a ser removido.
+ * @param z A coordenada z do voxel a ser removido.
+ */
 void Sculptor::cutVoxel(int x, int y, int z)
 {
   // Implementação do método cutVoxel => Remoção do Voxel
   v[x][y][z].show = false;
 }
 
+/**
+ * @brief Adiciona uma caixa/cubo no escultor.
+ *
+ * @param x0 Coordenada x inicial da cubo.
+ * @param x1 Coordenada x final da cubo.
+ * @param y0 Coordenada y inicial da cubo.
+ * @param y1 Coordenada y final da cubo.
+ * @param z0 Coordenada z inicial da cubo.
+ * @param z1 Coordenada z final da cubo.
+ */
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
   // Implementação do método putBox => Adição de uma caixa/cubo
@@ -115,6 +150,16 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
   }
 }
 
+/**
+ * @brief Remove uma caixa/cubo do escultor.
+ *
+ * @param x0 Coordenada x do canto superior esquerdo da cubo.
+ * @param x1 Coordenada x do canto inferior direito da cubo.
+ * @param y0 Coordenada y do canto superior esquerdo da cubo.
+ * @param y Coordenada y do canto inferior direito da cubo.
+ * @param z0 Coordenada z do canto superior esquerdo da cubo.
+ * @param z1 Coordenada z do canto inferior direito da cubo.
+ */
 void Sculptor::cutBox(int x0, int x1, int y0, int y, int z0, int z1)
 {
   // Implementação do método cutBox => Remoção de uma caixa/cubo
@@ -130,6 +175,14 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y, int z0, int z1)
   }
 }
 
+/**
+ * @brief Adiciona uma esfera no escultor.
+ *
+ * @param xcenter Coordenada x do centro da esfera.
+ * @param ycenter Coordenada y do centro da esfera.
+ * @param zcenter Coordenada z do centro da esfera.
+ * @param radius Raio da esfera.
+ */
 void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
   // Implementação do método putSphere => Adição de uma esfera
@@ -155,6 +208,14 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
   }
 }
 
+/**
+ * @brief Remove uma esfera do escultor.
+ *
+ * @param xcenter Coordenada x do centro da esfera.
+ * @param ycenter Coordenada y do centro da esfera.
+ * @param zcenter Coordenada z do centro da esfera.
+ * @param radius Raio da esfera.
+ */
 void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 {
   // Implementação do método cutSphere => Remoção de uma esfera
@@ -179,6 +240,16 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
   }
 }
 
+/**
+ * @brief Adiciona uma elipsoide no escultor.
+ *
+ * @param xcenter Coordenada x do centro da elipsoide.
+ * @param ycenter Coordenada y do centro da elipsoide.
+ * @param zcenter Coordenada z do centro da elipsoide.
+ * @param rx Raio da elipsoide no eixo x.
+ * @param ry Raio da elipsoide no eixo y.
+ * @param rz Raio da elipsoide no eixo z.
+ */
 void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx,
                             int ry, int rz)
 {
@@ -256,6 +327,16 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx,
   }
 }
 
+/**
+ * @brief Remove uma elipsoide do escultor.
+ *
+ * @param xcenter Coordenada x do centro da elipsoide.
+ * @param ycenter Coordenada y do centro da elipsoide.
+ * @param zcenter Coordenada z do centro da elipsoide.
+ * @param rx Raio da elipsoide no eixo x.
+ * @param ry Raio da elipsoide no eixo y.
+ * @param rz Raio da elipsoide no eixo z.
+ */
 void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx,
                             int ry, int rz)
 {
@@ -332,6 +413,11 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx,
   }
 }
 
+/**
+ * @brief Salva a escultura em um arquivo OFF.
+ *
+ * @param filename O nome do arquivo a ser criado.
+ */
 void Sculptor::writeOFF(const char *filename)
 {
   // Implementação do método writeOFF => Salva a escultura em um arquivo OFF

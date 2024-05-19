@@ -1,19 +1,20 @@
-# DCA1202-Programacao-Avancada
+# Projeto Escultor 3D
 
-# Passos a serem seguidos:
+Este repositório contém o código-fonte do projeto Escultor 3D, desenvolvido como parte da disciplina DCA1202 - Programação Avançada.
 
-## 1 - Preparar o construtor da classe; OK
-  
-### 1.1 - Copiar as dimensões; OK
+## Passos a serem seguidos:
 
-### 1.2 - Alocar a matriz 3DD; OK
+1. Preparar o construtor da classe:
 
-## 2 - Preparar o destrutor ; OK
+   - Copiar as dimensões.
+   - Alocar a matriz 3D.
 
-### 2.1 - Liberar a matriz 3D; OK
+2. Preparar o destrutor:
 
-## 3 - Implementar setColor(); OK
+   - Liberar a matriz 3D.
 
-## 4 - Implementar putVoxel(); OK
+3. Implementar a função setColor().
 
-## 5 - Implementar writeOFF();
+4. Implementar a função putVoxel().
+
+5. Implementar a função writeOFF().
