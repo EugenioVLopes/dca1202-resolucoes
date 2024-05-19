@@ -57,7 +57,7 @@ Sculptor::~Sculptor()
 }
 
 /**
- * @brief Define a cor atual do escultor.
+ * @brief Define a cor atual de desenho.
  *
  * @param r Valor do componente vermelho da cor (entre 0 e 1).
  * @param g Valor do componente verde da cor (entre 0 e 1).
@@ -113,7 +113,7 @@ void Sculptor::putVoxel(int x, int y, int z)
 }
 
 /**
- * @brief Método responsável por remover um voxel da matriz 3D.
+ * @brief Método responsável por desativar um voxel na posição x,y e z.
  *
  * @param x A coordenada x do voxel a ser removido.
  * @param y A coordenada y do voxel a ser removido.
@@ -126,14 +126,16 @@ void Sculptor::cutVoxel(int x, int y, int z)
 }
 
 /**
- * @brief Adiciona uma caixa/cubo no escultor.
+ * @brief Adiciona uma cubo no escultor.Ativa todos os voxels no intervalo x∈[x0,x1], y∈[y0,y1], z∈[z0,z1] e
+ * atribui aos mesmos a cor atual de desenho.
  *
- * @param x0 Coordenada x inicial da cubo.
- * @param x1 Coordenada x final da cubo.
- * @param y0 Coordenada y inicial da cubo.
- * @param y1 Coordenada y final da cubo.
- * @param z0 Coordenada z inicial da cubo.
- * @param z1 Coordenada z final da cubo.
+ * @param x0 Coordenada x inicial da caixa/cubo.
+ * @param x1 Coordenada x final da caixa/cubo.
+ * @param y0 Coordenada y inicial da caixa/cubo.
+ * @param y1 Coordenada y final da caixa/cubo.
+ * @param z0 Coordenada z inicial da caixa/cubo.
+ * @param z1 Coordenada z final da caixa/cubo.
+ *
  */
 void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 {
@@ -151,7 +153,8 @@ void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
 }
 
 /**
- * @brief Remove uma caixa/cubo do escultor.
+ * @brief Remove uma caixa/cubo do escultor. Desativa todos os voxels no intervalo x∈[x0,x1], y∈[y0,y1], z∈[z0,z1]
+ * e atribui aos mesmos a cor atual de desenho.
  *
  * @param x0 Coordenada x do canto superior esquerdo da cubo.
  * @param x1 Coordenada x do canto inferior direito da cubo.
@@ -176,7 +179,9 @@ void Sculptor::cutBox(int x0, int x1, int y0, int y, int z0, int z1)
 }
 
 /**
- * @brief Adiciona uma esfera no escultor.
+ * @brief Adiciona uma esfera no escultor. Ativa todos os voxels que satisfazem à equação da esfera
+ * e atribui aos mesmos a cor atual de desenho (r,g,b,a).
+
  *
  * @param xcenter Coordenada x do centro da esfera.
  * @param ycenter Coordenada y do centro da esfera.
@@ -209,7 +214,7 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
 }
 
 /**
- * @brief Remove uma esfera do escultor.
+ * @brief Desativa todos os voxels que satisfazem à equação da esfera.
  *
  * @param xcenter Coordenada x do centro da esfera.
  * @param ycenter Coordenada y do centro da esfera.
@@ -241,7 +246,8 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
 }
 
 /**
- * @brief Adiciona uma elipsoide no escultor.
+ * @brief Ativa todos os voxels que satisfazem à equação do elipsóide e atribui aos mesmos
+ * a cor atual de desenho.
  *
  * @param xcenter Coordenada x do centro da elipsoide.
  * @param ycenter Coordenada y do centro da elipsoide.
@@ -328,7 +334,7 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx,
 }
 
 /**
- * @brief Remove uma elipsoide do escultor.
+ * @brief Desativa todos os voxels que satisfazem à equação do elipsóide.
  *
  * @param xcenter Coordenada x do centro da elipsoide.
  * @param ycenter Coordenada y do centro da elipsoide.

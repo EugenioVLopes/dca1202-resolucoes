@@ -18,12 +18,6 @@ struct Voxel
   float a;   /**< Transparência do voxel (0 a 1). */
   bool show; /**< Indica se o voxel deve ser exibido ou não. */
 };
-struct Voxel
-{
-  float r, g, b; // Cores: Vermelhor, Verde, Azul
-  float a;       // Trasnparencia
-  bool show;     // Propriedade que determina se será exibido  Incluido ou nao
-};
 
 /**
  * @file sculptor.hpp
