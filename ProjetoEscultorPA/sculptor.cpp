@@ -90,9 +90,6 @@ void Sculptor::setColor(float r, float g, float b, float a)
     // Atribui o valor de alpha ao atributo a da classe
     this->a = a;
   }
-
-  std::cout << "Cor definida: " << r << " " << g << " " << b << " " << a
-            << std::endl;
 }
 
 /**
