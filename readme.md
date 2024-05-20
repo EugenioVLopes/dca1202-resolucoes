@@ -4,7 +4,7 @@ Este repositório contém os códigos-fonte dos exercícios e projetos da grade 
 
 da disciplina DCA1202 - Programação Avancada.
 
-[# Projeto Escultor](https://eugeniovlopes.github.io/dca1202-resolucoes/docs/)
+[# Projeto Escultor](https://eugeniovlopes.github.io/dca1202-resolucoes/)
 
 # Autores
 
