@@ -1,0 +1,95 @@
+\doxysection{Put\+Voxel Class Reference}
+\hypertarget{class_put_voxel}{}\label{class_put_voxel}\index{PutVoxel@{PutVoxel}}
+
+
+A classe \doxylink{class_put_voxel}{Put\+Voxel} constitui um voxel ativo em um \doxylink{class_sculptor}{Sculptor}.  
+
+
+
+
+{\ttfamily \#include $<$putvoxel.\+h$>$}
+
+Inheritance diagram for Put\+Voxel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_put_voxel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_put_voxel_adf235b90509b223f8758aebac15002a3}{Put\+Voxel}} ()
+\begin{DoxyCompactList}\small\item\em Cores e transparência do voxel. \end{DoxyCompactList}\item 
+\Hypertarget{class_put_voxel_ac3c14b19e69b462e3178b5dca92d7b34}\label{class_put_voxel_ac3c14b19e69b462e3178b5dca92d7b34} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Put\+Voxel} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_put_voxel}{Put\+Voxel}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_put_voxel_af784ab77d8a7aac2010e608796710ccb}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&t)
+\begin{DoxyCompactList}\small\item\em Método responsável por desenhar o voxel no \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_put_voxel_aa568a435565e125d3efff56eb84e3fe7}{Put\+Voxel}} (std\+::vector$<$ std\+::string $>$ v)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_put_voxel}{Put\+Voxel}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \doxylink{class_put_voxel}{Put\+Voxel} constitui um voxel ativo em um \doxylink{class_sculptor}{Sculptor}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_put_voxel_adf235b90509b223f8758aebac15002a3}\label{class_put_voxel_adf235b90509b223f8758aebac15002a3} 
+\index{PutVoxel@{PutVoxel}!PutVoxel@{PutVoxel}}
+\index{PutVoxel@{PutVoxel}!PutVoxel@{PutVoxel}}
+\doxysubsubsection{\texorpdfstring{PutVoxel()}{PutVoxel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Put\+Voxel\+::\+Put\+Voxel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cores e transparência do voxel. 
+
+Construtor padrão da classe \doxylink{class_put_voxel}{Put\+Voxel}. \Hypertarget{class_put_voxel_aa568a435565e125d3efff56eb84e3fe7}\label{class_put_voxel_aa568a435565e125d3efff56eb84e3fe7} 
+\index{PutVoxel@{PutVoxel}!PutVoxel@{PutVoxel}}
+\index{PutVoxel@{PutVoxel}!PutVoxel@{PutVoxel}}
+\doxysubsubsection{\texorpdfstring{PutVoxel()}{PutVoxel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Put\+Voxel\+::\+Put\+Voxel (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_put_voxel}{Put\+Voxel}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vetor contendo as informações do voxel (x, y, z, r, g, b, a). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_put_voxel_af784ab77d8a7aac2010e608796710ccb}\label{class_put_voxel_af784ab77d8a7aac2010e608796710ccb} 
+\index{PutVoxel@{PutVoxel}!draw@{draw}}
+\index{draw@{draw}!PutVoxel@{PutVoxel}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Put\+Voxel\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método responsável por desenhar o voxel no \doxylink{class_sculptor}{Sculptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Referência para um objeto \doxylink{class_sculptor}{Sculptor} onde o voxel será desenhado. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_figura_geometrica_a34585fd7c0bd7378fc69c4ee208e676c}{Figura\+Geometrica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+putvoxel.\+h\item 
+putvoxel.\+cpp\end{DoxyCompactItemize}

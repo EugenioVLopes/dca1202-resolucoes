@@ -1,0 +1,86 @@
+\doxysection{Put\+Sphere Class Reference}
+\hypertarget{class_put_sphere}{}\label{class_put_sphere}\index{PutSphere@{PutSphere}}
+
+
+A classe \doxylink{class_put_sphere}{Put\+Sphere} constitui a criação de uma esfera.  
+
+
+
+
+{\ttfamily \#include $<$putsphere.\+h$>$}
+
+Inheritance diagram for Put\+Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_put_sphere}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_put_sphere_af398ef7421e081be31ac5a9bc258612a}\label{class_put_sphere_af398ef7421e081be31ac5a9bc258612a} 
+{\bfseries Put\+Sphere} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_put_sphere}{Put\+Sphere}. \end{DoxyCompactList}\item 
+\Hypertarget{class_put_sphere_ab1c65114a718e71349497588ccb3e04b}\label{class_put_sphere_ab1c65114a718e71349497588ccb3e04b} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Put\+Sphere} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_put_sphere}{Put\+Sphere}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_put_sphere_a5105d1e171563e16c148d8f715321b24}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&t)
+\begin{DoxyCompactList}\small\item\em Método responsável por desenhar a esfera no \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_put_sphere_aba8876caf070f49fe863326a090b1e90}{Put\+Sphere}} (std\+::vector$<$ std\+::string $>$ v)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_put_sphere}{Put\+Sphere}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \doxylink{class_put_sphere}{Put\+Sphere} constitui a criação de uma esfera. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_put_sphere_aba8876caf070f49fe863326a090b1e90}\label{class_put_sphere_aba8876caf070f49fe863326a090b1e90} 
+\index{PutSphere@{PutSphere}!PutSphere@{PutSphere}}
+\index{PutSphere@{PutSphere}!PutSphere@{PutSphere}}
+\doxysubsubsection{\texorpdfstring{PutSphere()}{PutSphere()}}
+{\footnotesize\ttfamily Put\+Sphere\+::\+Put\+Sphere (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_put_sphere}{Put\+Sphere}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vetor contendo as informações da esfera (xcenter, ycenter, zcenter, radius, r, g, b, a). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_put_sphere_a5105d1e171563e16c148d8f715321b24}\label{class_put_sphere_a5105d1e171563e16c148d8f715321b24} 
+\index{PutSphere@{PutSphere}!draw@{draw}}
+\index{draw@{draw}!PutSphere@{PutSphere}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Put\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método responsável por desenhar a esfera no \doxylink{class_sculptor}{Sculptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Referência para um objeto \doxylink{class_sculptor}{Sculptor} onde a esfera será desenhada. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_figura_geometrica_a34585fd7c0bd7378fc69c4ee208e676c}{Figura\+Geometrica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+putsphere.\+h\item 
+putsphere.\+cpp\end{DoxyCompactItemize}

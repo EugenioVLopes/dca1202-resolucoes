@@ -1,0 +1,201 @@
+\doxysection{Sculptor Class Reference}
+\hypertarget{class_sculptor}{}\label{class_sculptor}\index{Sculptor@{Sculptor}}
+
+
+A classe \doxylink{class_sculptor}{Sculptor} representa um escultor 3D.  
+
+
+
+
+{\ttfamily \#include $<$sculptor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sculptor_a53a30d0b885234051d28416fda18eda8}{Sculptor}} (std\+::vector$<$ std\+::string $>$ vetor)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}{\texorpdfstring{$\sim$}{\string~}\+Sculptor}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}{set\+Color}} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Define a cor atual de desenho. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a58cb72d22001a5034f15383ca983830c}{write\+OFF}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Salva a escultura em um arquivo OFF. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_a691f53edbfe6ba995763f35ec19b4d75}{get\+Nx}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a dimensão em x do escultor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_ac106b6d85633e9dbefec5a4c436287f9}{get\+Ny}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a dimensão em y do escultor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_sculptor_a544ce319f544b6b5f941fa322aa67e3b}{get\+Nz}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a dimensão em z do escultor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}{put\+Voxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em Torna visivel o voxel nas coordenadas especificadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}{cut\+Voxel}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em Método responsável por desativar um voxel na posição x,y e z. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sculptor_a11d0a0d412f4b5d9b241364afa99afb5}\label{class_sculptor_a11d0a0d412f4b5d9b241364afa99afb5} 
+int {\bfseries Nvertices} = 0
+\begin{DoxyCompactList}\small\item\em Cor atual para desenho. \end{DoxyCompactList}\item 
+\Hypertarget{class_sculptor_aefa26d2a5b31985b4e81f6fc4697e959}\label{class_sculptor_aefa26d2a5b31985b4e81f6fc4697e959} 
+int {\bfseries Nfaces} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \doxylink{class_sculptor}{Sculptor} representa um escultor 3D. 
+
+O escultor é representado por uma matriz tridimensional de voxels, onde cada voxel possui uma cor RGBA. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sculptor_a53a30d0b885234051d28416fda18eda8}\label{class_sculptor_a53a30d0b885234051d28416fda18eda8} 
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\index{Sculptor@{Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{Sculptor()}{Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::\+Sculptor (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{vetor }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{class_sculptor}{Sculptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vetor} & Vetor contendo informações (dimensões nx, ny, nz). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sculptor_a8f159bf97458326f16d2e238e11be7ff}\label{class_sculptor_a8f159bf97458326f16d2e238e11be7ff} 
+\index{Sculptor@{Sculptor}!````~Sculptor@{\texorpdfstring{$\sim$}{\string~}Sculptor}}
+\index{````~Sculptor@{\texorpdfstring{$\sim$}{\string~}Sculptor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sculptor()}{\string~Sculptor()}}
+{\footnotesize\ttfamily Sculptor\+::\texorpdfstring{$\sim$}{\string~}\+Sculptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destrutor da classe \doxylink{class_sculptor}{Sculptor}. 
+
+Libera a memória alocada para a matriz tridimensional que representa o escultor.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_sculptor}{Sculptor} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c}\label{class_sculptor_ad9d714a35fc8ae16d06eb5df37c3493c} 
+\index{Sculptor@{Sculptor}!cutVoxel@{cutVoxel}}
+\index{cutVoxel@{cutVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{cutVoxel()}{cutVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::cut\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+Método responsável por desativar um voxel na posição x,y e z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A coordenada x do voxel a ser removido. \\
+\hline
+{\em y} & A coordenada y do voxel a ser removido. \\
+\hline
+{\em z} & A coordenada z do voxel a ser removido. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sculptor_a691f53edbfe6ba995763f35ec19b4d75}\label{class_sculptor_a691f53edbfe6ba995763f35ec19b4d75} 
+\index{Sculptor@{Sculptor}!getNx@{getNx}}
+\index{getNx@{getNx}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getNx()}{getNx()}}
+{\footnotesize\ttfamily int Sculptor\+::get\+Nx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a dimensão em x do escultor. 
+
+\begin{DoxyReturn}{Returns}
+Dimensão em x. 
+\end{DoxyReturn}
+\Hypertarget{class_sculptor_ac106b6d85633e9dbefec5a4c436287f9}\label{class_sculptor_ac106b6d85633e9dbefec5a4c436287f9} 
+\index{Sculptor@{Sculptor}!getNy@{getNy}}
+\index{getNy@{getNy}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getNy()}{getNy()}}
+{\footnotesize\ttfamily int Sculptor\+::get\+Ny (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a dimensão em y do escultor. 
+
+\begin{DoxyReturn}{Returns}
+Dimensão em y. 
+\end{DoxyReturn}
+\Hypertarget{class_sculptor_a544ce319f544b6b5f941fa322aa67e3b}\label{class_sculptor_a544ce319f544b6b5f941fa322aa67e3b} 
+\index{Sculptor@{Sculptor}!getNz@{getNz}}
+\index{getNz@{getNz}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{getNz()}{getNz()}}
+{\footnotesize\ttfamily int Sculptor\+::get\+Nz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtém a dimensão em z do escultor. 
+
+\begin{DoxyReturn}{Returns}
+Dimensão em z. 
+\end{DoxyReturn}
+\Hypertarget{class_sculptor_a4bdea3048b419d58e93074060eaa7b52}\label{class_sculptor_a4bdea3048b419d58e93074060eaa7b52} 
+\index{Sculptor@{Sculptor}!putVoxel@{putVoxel}}
+\index{putVoxel@{putVoxel}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{putVoxel()}{putVoxel()}}
+{\footnotesize\ttfamily void Sculptor\+::put\+Voxel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})}
+
+
+
+Torna visivel o voxel nas coordenadas especificadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A coordenada x do voxel. \\
+\hline
+{\em y} & A coordenada y do voxel. \\
+\hline
+{\em z} & A coordenada z do voxel. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sculptor_a4351c930a07887e96d4fdbf251a7867e}\label{class_sculptor_a4351c930a07887e96d4fdbf251a7867e} 
+\index{Sculptor@{Sculptor}!setColor@{setColor}}
+\index{setColor@{setColor}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Sculptor\+::set\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Define a cor atual de desenho. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Valor do componente vermelho da cor (entre 0 e 1). \\
+\hline
+{\em g} & Valor do componente verde da cor (entre 0 e 1). \\
+\hline
+{\em b} & Valor do componente azul da cor (entre 0 e 1). \\
+\hline
+{\em a} & Valor da transparência da cor (entre 0 e 1). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sculptor_a58cb72d22001a5034f15383ca983830c}\label{class_sculptor_a58cb72d22001a5034f15383ca983830c} 
+\index{Sculptor@{Sculptor}!writeOFF@{writeOFF}}
+\index{writeOFF@{writeOFF}!Sculptor@{Sculptor}}
+\doxysubsubsection{\texorpdfstring{writeOFF()}{writeOFF()}}
+{\footnotesize\ttfamily void Sculptor\+::write\+OFF (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Salva a escultura em um arquivo OFF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & O nome do arquivo a ser criado. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sculptor.\+h\item 
+sculptor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+\doxysection{readfile.\+h}
+\hypertarget{readfile_8h_source}{}\label{readfile_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ READFILE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ READFILE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}figurageometrica.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}sculptor.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_read_file}{ReadFile}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ std::ifstream}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ fin;\ }
+\DoxyCodeLine{00017\ \ \ std::string\ line;\ \ \ \ }
+\DoxyCodeLine{00018\ \ \ std::string\ palavra;\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{class_read_file_a723ab9c0da9a1651427c382595d86c27}{ReadFile}}();}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_read_file_ade3be016d676a1b5325802f5c2d24654}{read}}(std::vector<FiguraGeometrica\ *>\ \&desenho,\ \mbox{\hyperlink{class_sculptor}{Sculptor}}\ *\&t,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *filename);}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{class_read_file_a6907d1c4540eda101bfef2ba2b87af4b}{\string~ReadFile}}();}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ READFILE\_H}}
+
+\end{DoxyCode}

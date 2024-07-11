@@ -2,7 +2,7 @@
 #define FIGURAGEOMETRICA_H
 #include "sculptor.h"
 /**
- * @brief A classe FiguraGeometrica representa uma figura geométrica genérica.
+ * @brief A classe FiguraGeometrica constitui uma figura geométrica genérica.
  */
 class FiguraGeometrica {
 public:

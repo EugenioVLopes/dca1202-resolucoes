@@ -1,0 +1,53 @@
+\doxysection{Read\+File Class Reference}
+\hypertarget{class_read_file}{}\label{class_read_file}\index{ReadFile@{ReadFile}}
+
+
+A classe \doxylink{class_read_file}{Read\+File} é responsável por ler um arquivo e criar desenhos em um \doxylink{class_sculptor}{Sculptor}.  
+
+
+
+
+{\ttfamily \#include $<$readfile.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_read_file_a723ab9c0da9a1651427c382595d86c27}\label{class_read_file_a723ab9c0da9a1651427c382595d86c27} 
+{\bfseries Read\+File} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_read_file}{Read\+File}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_read_file_ade3be016d676a1b5325802f5c2d24654}{read}} (std\+::vector$<$ \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}} \texorpdfstring{$\ast$}{*} $>$ \&desenho, \mbox{\hyperlink{class_sculptor}{Sculptor}} \texorpdfstring{$\ast$}{*}\&t, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Método para ler um arquivo e criar desenhos em um \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+\Hypertarget{class_read_file_a6907d1c4540eda101bfef2ba2b87af4b}\label{class_read_file_a6907d1c4540eda101bfef2ba2b87af4b} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Read\+File} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_read_file}{Read\+File}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \doxylink{class_read_file}{Read\+File} é responsável por ler um arquivo e criar desenhos em um \doxylink{class_sculptor}{Sculptor}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_read_file_ade3be016d676a1b5325802f5c2d24654}\label{class_read_file_ade3be016d676a1b5325802f5c2d24654} 
+\index{ReadFile@{ReadFile}!read@{read}}
+\index{read@{read}!ReadFile@{ReadFile}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void Read\+File\+::read (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}} \texorpdfstring{$\ast$}{*} $>$ \&}]{desenho,  }\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \texorpdfstring{$\ast$}{*}\&}]{t,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Método para ler um arquivo e criar desenhos em um \doxylink{class_sculptor}{Sculptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desenho} & Vetor de ponteiros para \doxylink{class_figura_geometrica}{Figura\+Geometrica} onde os desenhos serão armazenados. \\
+\hline
+{\em t} & Ponteiro para um objeto \doxylink{class_sculptor}{Sculptor} onde os desenhos serão criados. \\
+\hline
+{\em filename} & Nome do arquivo a ser lido. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+readfile.\+h\item 
+readfile.\+cpp\end{DoxyCompactItemize}

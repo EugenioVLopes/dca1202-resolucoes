@@ -4,7 +4,7 @@
 #include "figurageometrica.h"
 
 /**
- * @brief A classe CutEllipsoid representa a remoção de um elipsoide em um
+ * @brief A classe CutEllipsoid institui a remoção de um elipsoide em um
  * Sculptor.
  */
 class CutEllipsoid : public FiguraGeometrica {

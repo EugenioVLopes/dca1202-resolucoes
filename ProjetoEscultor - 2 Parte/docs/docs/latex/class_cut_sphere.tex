@@ -1,0 +1,95 @@
+\doxysection{Cut\+Sphere Class Reference}
+\hypertarget{class_cut_sphere}{}\label{class_cut_sphere}\index{CutSphere@{CutSphere}}
+
+
+A classe \doxylink{class_cut_sphere}{Cut\+Sphere} institui a remoção de uma esfera em um \doxylink{class_sculptor}{Sculptor}.  
+
+
+
+
+{\ttfamily \#include $<$cutsphere.\+h$>$}
+
+Inheritance diagram for Cut\+Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cut_sphere}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cut_sphere_a7456bf14393217aaf939f90a18a92b2f}{Cut\+Sphere}} ()
+\begin{DoxyCompactList}\small\item\em Raio da esfera a ser removida. \end{DoxyCompactList}\item 
+\Hypertarget{class_cut_sphere_a9314c0e7e18f0e488cce4d4b2fbb8ae7}\label{class_cut_sphere_a9314c0e7e18f0e488cce4d4b2fbb8ae7} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Cut\+Sphere} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_cut_sphere}{Cut\+Sphere}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cut_sphere_ad62239c047f0817ba6fd4b85ae2eae42}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&t)
+\begin{DoxyCompactList}\small\item\em Método responsável por remover a esfera no \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cut_sphere_a921bad40b584ed7b39ede5cefd1f4745}{Cut\+Sphere}} (std\+::vector$<$ std\+::string $>$ v)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_cut_sphere}{Cut\+Sphere}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \doxylink{class_cut_sphere}{Cut\+Sphere} institui a remoção de uma esfera em um \doxylink{class_sculptor}{Sculptor}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cut_sphere_a7456bf14393217aaf939f90a18a92b2f}\label{class_cut_sphere_a7456bf14393217aaf939f90a18a92b2f} 
+\index{CutSphere@{CutSphere}!CutSphere@{CutSphere}}
+\index{CutSphere@{CutSphere}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{CutSphere()}{CutSphere()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cut\+Sphere\+::\+Cut\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Raio da esfera a ser removida. 
+
+Construtor padrão da classe \doxylink{class_cut_sphere}{Cut\+Sphere}. \Hypertarget{class_cut_sphere_a921bad40b584ed7b39ede5cefd1f4745}\label{class_cut_sphere_a921bad40b584ed7b39ede5cefd1f4745} 
+\index{CutSphere@{CutSphere}!CutSphere@{CutSphere}}
+\index{CutSphere@{CutSphere}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{CutSphere()}{CutSphere()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cut\+Sphere\+::\+Cut\+Sphere (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_cut_sphere}{Cut\+Sphere}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vetor contendo as informações da esfera a ser removida (xcenter, ycenter, zcenter, radius). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cut_sphere_ad62239c047f0817ba6fd4b85ae2eae42}\label{class_cut_sphere_ad62239c047f0817ba6fd4b85ae2eae42} 
+\index{CutSphere@{CutSphere}!draw@{draw}}
+\index{draw@{draw}!CutSphere@{CutSphere}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cut\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método responsável por remover a esfera no \doxylink{class_sculptor}{Sculptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Referência para um objeto \doxylink{class_sculptor}{Sculptor} onde a esfera será removida. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_figura_geometrica_a34585fd7c0bd7378fc69c4ee208e676c}{Figura\+Geometrica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cutsphere.\+h\item 
+cutsphere.\+cpp\end{DoxyCompactItemize}

@@ -6,7 +6,7 @@
 #include <vector>
 
 /**
- * @brief A classe PutVoxel representa um voxel ativo em um Sculptor.
+ * @brief A classe PutVoxel constitui um voxel ativo em um Sculptor.
  */
 class PutVoxel : public FiguraGeometrica {
 private:

@@ -10,7 +10,7 @@
 #include "sculptor.h"
 
 /**
- * @brief A classe CutBox representa uma caixa/box a ser removida no Sculptor.
+ * @brief A classe CutBox institui uma caixa/box a ser removida no Sculptor.
  */
 class CutBox : public FiguraGeometrica
 {

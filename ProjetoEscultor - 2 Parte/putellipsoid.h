@@ -4,8 +4,7 @@
 #include "figurageometrica.h"
 
 /**
- * @brief A classe PutEllipsoid representa a criação de um elipsoide em um
- * Sculptor.
+ * @brief A classe PutEllipsoid constitui a criação de um elipsoide.
  */
 class PutEllipsoid : public FiguraGeometrica {
 private:

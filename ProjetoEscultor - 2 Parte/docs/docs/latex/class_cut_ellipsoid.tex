@@ -1,0 +1,95 @@
+\doxysection{Cut\+Ellipsoid Class Reference}
+\hypertarget{class_cut_ellipsoid}{}\label{class_cut_ellipsoid}\index{CutEllipsoid@{CutEllipsoid}}
+
+
+A classe \doxylink{class_cut_ellipsoid}{Cut\+Ellipsoid} institui a remoção de um elipsoide em um \doxylink{class_sculptor}{Sculptor}.  
+
+
+
+
+{\ttfamily \#include $<$cutellipsoid.\+h$>$}
+
+Inheritance diagram for Cut\+Ellipsoid\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cut_ellipsoid}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cut_ellipsoid_a3ac354ac0769c553c1a9ffe7e30fea69}{Cut\+Ellipsoid}} ()
+\begin{DoxyCompactList}\small\item\em Raios do elipsoide nos eixos x, y e z. \end{DoxyCompactList}\item 
+\Hypertarget{class_cut_ellipsoid_a15c04713f9df8ba34d971fe946f728a5}\label{class_cut_ellipsoid_a15c04713f9df8ba34d971fe946f728a5} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Cut\+Ellipsoid} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{class_cut_ellipsoid}{Cut\+Ellipsoid}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cut_ellipsoid_a7110c3cd9dc76bd09ec259b429a3e532}{draw}} (\mbox{\hyperlink{class_sculptor}{Sculptor}} \&t)
+\begin{DoxyCompactList}\small\item\em Método responsável por remover o elipsoide no \doxylink{class_sculptor}{Sculptor}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cut_ellipsoid_a5186566ca8fcfeed69a465aa13fa6ee1}{Cut\+Ellipsoid}} (std\+::vector$<$ std\+::string $>$ v)
+\begin{DoxyCompactList}\small\item\em Construtor parametrizado da classe \doxylink{class_cut_ellipsoid}{Cut\+Ellipsoid}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_figura_geometrica}{Figura\+Geometrica}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Figura\+Geometrica} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{class_figura_geometrica}{Figura\+Geometrica}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A classe \doxylink{class_cut_ellipsoid}{Cut\+Ellipsoid} institui a remoção de um elipsoide em um \doxylink{class_sculptor}{Sculptor}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cut_ellipsoid_a3ac354ac0769c553c1a9ffe7e30fea69}\label{class_cut_ellipsoid_a3ac354ac0769c553c1a9ffe7e30fea69} 
+\index{CutEllipsoid@{CutEllipsoid}!CutEllipsoid@{CutEllipsoid}}
+\index{CutEllipsoid@{CutEllipsoid}!CutEllipsoid@{CutEllipsoid}}
+\doxysubsubsection{\texorpdfstring{CutEllipsoid()}{CutEllipsoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cut\+Ellipsoid\+::\+Cut\+Ellipsoid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Raios do elipsoide nos eixos x, y e z. 
+
+Construtor padrão da classe \doxylink{class_cut_ellipsoid}{Cut\+Ellipsoid}. \Hypertarget{class_cut_ellipsoid_a5186566ca8fcfeed69a465aa13fa6ee1}\label{class_cut_ellipsoid_a5186566ca8fcfeed69a465aa13fa6ee1} 
+\index{CutEllipsoid@{CutEllipsoid}!CutEllipsoid@{CutEllipsoid}}
+\index{CutEllipsoid@{CutEllipsoid}!CutEllipsoid@{CutEllipsoid}}
+\doxysubsubsection{\texorpdfstring{CutEllipsoid()}{CutEllipsoid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cut\+Ellipsoid\+::\+Cut\+Ellipsoid (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+Construtor parametrizado da classe \doxylink{class_cut_ellipsoid}{Cut\+Ellipsoid}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vetor contendo as informações do elipsoide a ser removido (xcenter, ycenter, zcenter, raiox, raioy, raioz). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cut_ellipsoid_a7110c3cd9dc76bd09ec259b429a3e532}\label{class_cut_ellipsoid_a7110c3cd9dc76bd09ec259b429a3e532} 
+\index{CutEllipsoid@{CutEllipsoid}!draw@{draw}}
+\index{draw@{draw}!CutEllipsoid@{CutEllipsoid}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cut\+Ellipsoid\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sculptor}{Sculptor}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Método responsável por remover o elipsoide no \doxylink{class_sculptor}{Sculptor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Referência para um objeto \doxylink{class_sculptor}{Sculptor} onde o elipsoide será removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_figura_geometrica_a34585fd7c0bd7378fc69c4ee208e676c}{Figura\+Geometrica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cutellipsoid.\+h\item 
+cutellipsoid.\+cpp\end{DoxyCompactItemize}

@@ -4,7 +4,7 @@
 #include "figurageometrica.h"
 
 /**
- * @brief A classe PutSphere representa a criação de uma esfera em um Sculptor.
+ * @brief A classe PutSphere constitui a criação de uma esfera.
  */
 class PutSphere : public FiguraGeometrica {
 private:

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 /**
- * @brief A classe CutVoxel representa a remoção de um voxel em um Sculptor.
+ * @brief A classe CutVoxel institui a remoção de um voxel em um Sculptor.
  */
 class CutVoxel : public FiguraGeometrica {
 private:

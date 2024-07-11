@@ -4,7 +4,7 @@
 #include "figurageometrica.h"
 
 /**
- * @brief A classe CutSphere representa a remoção de uma esfera em um Sculptor.
+ * @brief A classe CutSphere institui a remoção de uma esfera em um Sculptor.
  */
 class CutSphere : public FiguraGeometrica {
 private:

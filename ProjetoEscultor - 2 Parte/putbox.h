@@ -6,7 +6,7 @@
 #include <vector>
 
 /**
- * @brief A classe PutBox representa a criação de uma caixa em um Sculptor.
+ * @brief A classe PutBox constitui a criação de uma caixa/box.
  */
 class PutBox : public FiguraGeometrica {
 private:

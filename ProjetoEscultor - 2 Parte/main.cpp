@@ -11,14 +11,12 @@ int main(void) {
   ReadFile aux;
 
   aux.read(desenho, t,
-           "teste.txt");
+           "teste7.txt");
 
   for (int i = 0; i < int(desenho.size()); i++)
     desenho[i]->draw(*t);
 
   t->writeOFF("desenho.off");
-
-  std::cout << desenho.size();
 
   for (int i = 0; i < int(desenho.size()); i++)
     delete desenho[i];
