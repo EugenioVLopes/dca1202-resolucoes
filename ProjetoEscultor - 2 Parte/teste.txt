@@ -1,0 +1,13 @@
+dim 100 100 100
+putbox 0 100 0 100 0 100 0 0 0 0 1.0 0.0 0.0 1.0
+putvoxel 5 5 5 0.0 1.0 0.0 1.0
+putbox 10 15 10 15 10 15 1.0 0.5 0.0 1.0
+putbox 21 26 10 15 10 15
+cutbox 21 26 10 15 10 12 0.0 0.0 1.0 1.0
+putsphere 25 25 25 10 1.0 0.0 1.0 1.0
+putsphere 50 25 25 10
+cutsphere 50 25 35 5 1.0 1.0 0.0 1.0
+cutellipsoid 60 60 40 5 10 15 0.5 0.5 0.5 1.0
+cutellipsoid 80 60 40 5 10 16
+cutellipsoid 80 60 40 5 10 8
+writeoff sculpture.off
